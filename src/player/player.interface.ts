@@ -1,10 +1,14 @@
 export interface IPlayer {
 
-  // Getter
   getName(): string;
   getPoint(): number;
 
-  // Functions
+  /**
+   * Increment point of the player.
+   *
+   * @returns void
+   *
+   */
   wonPoint(): void;
 
 }
