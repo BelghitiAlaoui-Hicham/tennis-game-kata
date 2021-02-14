@@ -17,7 +17,7 @@ export class ScoreManager implements IScoreManager {
   public score(player1: IPlayer, player2: IPlayer): string {
 
     if(this.isAll(player1, player2)) {
-      return `${this.scores[player1.getScore()]} ALL`;
+      return `${this.scores[player1.getPoint()]} ALL`;
     }
 
     if(this.isDeuce(player1, player2)) { return `Game in deuce`; }
@@ -27,7 +27,7 @@ export class ScoreManager implements IScoreManager {
     const winner = this.playerWinner(player1, player2);
     if(winner) { return `${winner.getName()} win the game.`; }
 
-    return `${this.scores[player1.getScore()]} - ${this.scores[player2.getScore()]}`
+    return `${this.scores[player1.getPoint()]} - ${this.scores[player2.getPoint()]}`
   }
 
   public playerWinner(player1: IPlayer, player2: IPlayer): IPlayer | undefined {
@@ -43,25 +43,25 @@ export class ScoreManager implements IScoreManager {
   }
 
   private isDeuce(player1: IPlayer, player2: IPlayer): boolean {
-    return this.isEqual(player1, player2) && player1.getScore() >= 3;
+    return this.isEqual(player1, player2) && player1.getPoint() >= 3;
   }
 
   private isEqual(player1: IPlayer, player2: IPlayer): boolean {
-    return player1.getScore() === player2.getScore();
+    return player1.getPoint() === player2.getPoint();
   }
 
   private isAll(player1: IPlayer, player2: IPlayer) {
-    return this.isEqual(player1, player2) && player1.getScore() <= 2;
+    return this.isEqual(player1, player2) && player1.getPoint() <= 2;
   }
 
   private isWinner(winnerPlayer: IPlayer, adversary: IPlayer): boolean {
-    return winnerPlayer.getScore() >= 4
-      && winnerPlayer.getScore() - adversary.getScore() >= 2;
+    return winnerPlayer.getPoint() >= 4
+      && winnerPlayer.getPoint() - adversary.getPoint() >= 2;
   }
 
   private isAdvantage(advantagePlayer: IPlayer, adversary: IPlayer): boolean {
-    return advantagePlayer.getScore() >= 4
-      && advantagePlayer.getScore() - adversary.getScore() === 1;
+    return advantagePlayer.getPoint() >= 4
+      && advantagePlayer.getPoint() - adversary.getPoint() === 1;
   }
 
 }

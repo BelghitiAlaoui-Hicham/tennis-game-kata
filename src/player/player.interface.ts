@@ -1,8 +1,8 @@
 export interface IPlayer {
 
-  // Getter && Setters
+  // Getter
   getName(): string;
-  getScore(): number;
+  getPoint(): number;
 
   // Functions
   wonPoint(): void;

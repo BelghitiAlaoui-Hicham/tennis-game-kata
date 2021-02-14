@@ -14,9 +14,9 @@ describe("player win tests", () => {
   });
 
   it("should increment point by one", () => {
-    expect(player.getScore()).toEqual(0);
+    expect(player.getPoint()).toEqual(0);
     player.wonPoint();
-    expect(player.getScore()).toEqual(1);
+    expect(player.getPoint()).toEqual(1);
   });
 
 });

@@ -12,7 +12,7 @@ export class Player implements IPlayer {
 
   // Getter
   public getName(): string { return this._name; }
-  public getScore(): number { return this._point; }
+  public getPoint(): number { return this._point; }
 
   // Functions
   wonPoint(): void { this._point += 1; }
