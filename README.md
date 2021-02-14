@@ -2,7 +2,7 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 
-> This Kata is about implementing a simple tennis game.
+> This Kata is about implementing a simple tennis game. for more information: [CLICK ME](http://codingdojo.org/kata/Tennis/)
 
 ## Install
 
