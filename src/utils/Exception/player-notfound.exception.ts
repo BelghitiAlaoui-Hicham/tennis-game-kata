@@ -1,5 +1,8 @@
+import {ExceptionType} from "./exception-type.enum";
+
 export class PlayerNotfoundException  extends Error {
-  public constructor(msg = 'Player name not found in the game') {
+  public constructor() {
+    const msg: string = ExceptionType.playerNotFound;
     super(msg);
   }
 }

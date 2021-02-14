@@ -1,8 +1,7 @@
 import {ITennisGame} from "../tennis-game.interface";
 import {TennisGame} from "../tennis-game";
 import {Player} from "../../player/player";
-import {PlayersSameNameException} from "../../utils/Exception/players-same-name.exception";
-import {PlayerNotfoundException} from "../../utils/Exception/player-notfound.exception";
+import {ExceptionType} from "../../utils/Exception/exception-type.enum";
 
 
 describe("Score-manager player1 win tests", () => {
@@ -73,12 +72,12 @@ describe("Score-manager Exception tests", () => {
 
   it("should be an exception player not found", () => {
     expect(()=> {tenisGame.wonPoint('noone')})
-      .toThrow(new PlayerNotfoundException().message);
+      .toThrow(ExceptionType.playerNotFound);
   });
 
   it("should be an exception players have not the same name", () => {
     const name = 'hicham';
     expect(()=> {new TennisGame(name, name)})
-      .toThrow(new PlayersSameNameException().message);
+      .toThrow(ExceptionType.playersSameName);
   });
 });
