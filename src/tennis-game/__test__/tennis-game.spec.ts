@@ -80,4 +80,13 @@ describe("Score-manager Exception tests", () => {
     expect(()=> {new TennisGame(name, name)})
       .toThrow(ExceptionType.playersSameName);
   });
+
+  it("should be an exception game end", () => {
+    for(let i = 0; i<4; i++) {
+      tenisGame.wonPoint(player1);
+    }
+
+    expect(()=> {tenisGame.wonPoint(player1)})
+      .toThrow(ExceptionType.gameEnd);
+  });
 });
