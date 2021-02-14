@@ -12,14 +12,12 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "types": [
-      "node"
+      "node",
+      "jest"
     ],
     "typeRoots": [
       "node_modules/@types"
     ]
-  },
-  "compilerOptions": {
-    "types": ["jest", "node"]
   },
   "include": [
     "./src/**/*.ts"
