@@ -31,7 +31,7 @@ describe("Score-manager player1 win tests", () => {
 
     const winner = tenisGame.getWinner();
     expect(winner).toBeInstanceOf(Player);
-    expect(winner.getName()).toBe(player1);
+    expect((winner as Player).getName()).toBe(player1);
   });
 
 
@@ -54,7 +54,7 @@ describe("Score-manager player2 win tests", () => {
 
     const winner = tenisGame.getWinner();
     expect(winner).toBeInstanceOf(Player);
-    expect(winner.getName()).toBe(player2);
+    expect((winner as Player).getName()).toBe(player2);
   });
 
 

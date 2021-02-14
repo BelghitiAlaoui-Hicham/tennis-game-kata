@@ -73,7 +73,7 @@ describe("Score-manager player2 win tests", () => {
     const score = scoreManager.score(player1, player2);
 
     expect(winnerPlayer).toEqual(player2);
-    expect(winnerPlayer.getName()).toEqual(player2.getName());
+    expect((winnerPlayer as Player).getName()).toEqual(player2.getName());
     expect(score).toEqual(`${player2.getName()} win the game.`);
   });
 
@@ -99,7 +99,7 @@ describe("Score-manager player1 win tests", () => {
     const score = scoreManager.score(player1, player2);
 
     expect(winnerPlayer).toEqual(player1);
-    expect(winnerPlayer.getName()).toEqual(player1.getName());
+    expect((winnerPlayer as Player).getName()).toEqual(player1.getName());
     expect(score).toEqual(`${player1.getName()} win the game.`);
   });
 
