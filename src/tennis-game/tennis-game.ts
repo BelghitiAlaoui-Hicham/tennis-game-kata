@@ -49,6 +49,7 @@ export class TennisGame implements ITennisGame {
       if(player) {
         player.wonPoint();
         this.setEndGame();
+        return;
       }
       throw new PlayerNotfoundException();
     }
